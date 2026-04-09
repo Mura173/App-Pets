@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bege"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="FECAP PET!"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCaes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <TextView
+        android:id="@+id/txtCaes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cães"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineCaes" />
+
+    <ImageView
+        android:id="@+id/imgBob"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/bob"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCaes"
+        app:layout_constraintEnd_toStartOf="@+id/imgLisa"/>
+
+    <ImageView
+        android:id="@+id/imgLisa"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@id/imgTed"
+        app:layout_constraintStart_toEndOf="@id/imgBob"
+        app:layout_constraintTop_toBottomOf="@id/txtCaes"
+        app:srcCompat="@drawable/lisa" />
+
+    <ImageView
+        android:id="@+id/imgTed"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/ted"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/txtCaes"
+        app:layout_constraintStart_toEndOf="@id/imgLisa"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btnBob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detalhes"
+        app:layout_constraintTop_toBottomOf="@id/imgBob"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnLisa"/>
+
+    <Button
+        android:id="@+id/btnLisa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detalhes"
+        app:layout_constraintTop_toBottomOf="@id/imgLisa"
+        app:layout_constraintStart_toEndOf="@id/btnBob"
+        app:layout_constraintEnd_toStartOf="@id/btnTed"/>
+
+    <Button
+        android:id="@+id/btnTed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detalhes"
+        app:layout_constraintTop_toBottomOf="@id/imgTed"
+        app:layout_constraintStart_toEndOf="@id/btnLisa"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineGatos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <TextView
+        android:id="@+id/txtGatos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gatos"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidelineGatos"/>
+
+    <ImageView
+        android:id="@+id/imgFred"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/fred"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/txtGatos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/imgLuna"/>
+
+    <ImageView
+        android:id="@+id/imgLuna"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/luna"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/txtGatos"
+        app:layout_constraintStart_toEndOf="@+id/imgFred"
+        app:layout_constraintEnd_toStartOf="@id/imgTob"/>
+
+    <ImageView
+        android:id="@+id/imgTob"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/tob"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/txtGatos"
+        app:layout_constraintStart_toEndOf="@id/imgLuna"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btnFred"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detalhes"
+        app:layout_constraintTop_toBottomOf="@id/imgFred"
+        app:layout_constraintEnd_toStartOf="@id/btnLuna"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/btnLuna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detalhes"
+        app:layout_constraintTop_toBottomOf="@id/imgLuna"
+        app:layout_constraintStart_toEndOf="@id/btnFred"
+        app:layout_constraintEnd_toStartOf="@id/btnTob"/>
+
+    <Button
+        android:id="@+id/btnTob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detalhes"
+        app:layout_constraintTop_toBottomOf="@id/imgTob"
+        app:layout_constraintStart_toEndOf="@id/btnLuna"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
